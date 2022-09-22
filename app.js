@@ -1,8 +1,8 @@
-
-console.log
+console.log("Application")
 const path=require('path')
 const express=require('express')
 const app=express()
+const port=process.env.PORT || 3000
 const hbs = require('hbs');
 const request=require('request')
 const geocode=require('./utils/geocode')
@@ -156,7 +156,7 @@ app.get('/product',(req,res)=>{
 
 
 
-app.listen(3000,()=>
+app.listen(port,()=>
 {
-    console.log('Your sever is starting up')
+    console.log('Your sever is starting up'+port)
 })
